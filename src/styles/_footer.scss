@@ -1,0 +1,307 @@
+@use './variables/fonts' as *;
+@use './variables/colors' as *;
+@import "./variables/functions";
+
+.footer{
+    padding-block:2.5rem 3.5rem;
+    background: $DarkBlue;
+    font-family: $Fontfamily;
+    position: relative;
+    &-logo{
+        display: block;
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+    }
+    &-socials{
+        @include dcenter;
+        gap: 1rem;
+        margin-block: 2.5rem 1.5rem;
+        svg{
+            width:2rem;
+            
+            &:hover{
+                cursor: pointer;
+                path{
+                    fill: $LimeGreen;
+                }
+            }
+        }
+    }
+    &-nav{
+        list-style: none;
+        li{
+            text-align: center;
+            padding-block: 0.5rem;
+            a{
+                text-decoration: none;
+                color: $VeryLightGray;
+                font-size: $Fontsize;
+                &:hover{
+                    color: $LimeGreen;
+                }
+            }
+        }
+    }
+
+    &-CTA-btn{
+        margin:1.5rem auto;
+        display: block;
+        padding: 0.9rem 2rem;
+        border: none;
+        border-radius: 1.8rem;
+        font-family: $Fontfamily;
+        font-size: 0.9rem;
+        color: $LightGrayishBlue;
+        background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+        font-weight: weight(bold);
+        &:hover{
+            cursor: pointer;
+            background: linear-gradient(to right, hsl(136, 65%, 70%),hsl(192, 69%, 69%));
+        }
+    }
+
+    small{
+        display: block;
+        font-size: 1rem;
+        color: $GrayishBlue;
+       text-align: center;
+    }
+
+    .acknowledgement{
+       
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: $BrightCyan;
+            &:hover{
+                color: $LimeGreen;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1279px) {
+    .footer{
+        padding:2.5rem 6.5%;
+        background: $DarkBlue;
+        font-family: $Fontfamily;
+        position: relative;
+        max-height: 15rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+        "logo nav button "
+        " socials nav copyright"
+        "acknowledge acknowledge acknowledge";
+        column-gap: 1rem;
+        &-logo{
+            display: block;
+            height: 1.2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            translate: 0%;
+            grid-area: logo;
+        }
+       
+        &-socials{
+            @include dcenter;
+            gap: 0.1rem;
+            grid-area: socials;
+            margin-block: unset;
+            margin-right: auto;
+            svg{
+                width:2rem;
+                
+                &:hover{
+                    cursor: pointer;
+                    path{
+                        fill: $LimeGreen;
+                    }
+                }
+            }
+         }
+        &-nav{
+            list-style: none;
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-height: 7rem;
+            width: 100%;
+            gap: 1rem;
+            column-gap: 5rem;
+            padding-left: 1.5rem;
+            li{
+                text-align: center;
+                padding-block: unset;
+                padding-bottom:unset;
+                a{
+                    text-decoration: none;
+                    color: $VeryLightGray;
+                    &:hover{
+                        color: $LimeGreen;
+                    }
+                }
+            }
+        }
+    
+        &-CTA-btn{
+            margin: unset;
+            margin-left:auto;
+            margin-bottom: auto;
+            display: block;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 1.8rem;
+            font-family: $Fontfamily;
+            font-size: 0.9rem;
+            color: $LightGrayishBlue;
+            background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+            font-weight: weight(bold);
+            grid-area: button;
+
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(to right, hsl(136, 65%, 70%),hsl(192, 69%, 69%));
+            }
+        }
+    
+        small{
+            display: block;
+            font-size: 1rem;
+            color: $GrayishBlue;
+           text-align: center;
+           grid-area: copyright;
+        }
+
+        .acknowledgement{
+            grid-area: acknowledge;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $BrightCyan;
+                &:hover{
+                    color: $LimeGreen;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .footer{
+        padding:3rem 11.7% 2.5rem 11.7%;
+        background: $DarkBlue;
+        font-family: $Fontfamily;
+        position: relative;
+        max-height: 15rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns:1fr 1.5fr 2fr;
+        grid-template-areas:
+        "logo nav button "
+        " socials nav copyright"
+        "acknowledge acknowledge acknowledge";
+        column-gap: 1rem;
+        &-logo{
+            display: block;
+            height: 1.2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            translate: 0%;
+            grid-area: logo;
+        }
+        &-socials{
+           @include dcenter;
+            gap: 0.1rem;
+            grid-area: socials;
+            margin-block: unset;
+            margin-right: auto;
+            svg{
+                width:2rem;
+                
+                &:hover{
+                    cursor: pointer;
+                    path{
+                        fill: $LimeGreen;
+                    }
+                }
+            }
+        }
+        &-nav{
+            list-style: none;
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-height: 7rem;
+            width: 100%;
+            gap: 1rem;
+            column-gap: 5rem;
+            padding-left: 1.5rem;
+            li{
+                text-align: center;
+                padding-block: unset;
+                padding-bottom:unset;
+                a{
+                    text-decoration: none;
+                    color: $VeryLightGray;
+                    &:hover{
+                        color: $LimeGreen;
+                    }
+                }
+            }
+        }
+    
+        &-CTA-btn{
+           
+            margin: unset;
+            margin-left:auto;
+            margin-bottom: auto;
+            display: block;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 1.8rem;
+            font-family: $Fontfamily;
+            font-size: 0.9rem;
+            color: $LightGrayishBlue;
+            background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+            font-weight: weight(bold);
+            grid-area: button;
+
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(to right, hsl(136, 65%, 70%),hsl(192, 69%, 69%));
+            }
+        }
+    
+        small{
+            display: block;
+            font-size: 1rem;
+            color: $GrayishBlue;
+           text-align: right;
+           margin-left: auto;
+           grid-area: copyright;
+        }
+
+        .acknowledgement{
+            grid-area: acknowledge;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $BrightCyan;
+                &:hover{
+                    color: $LimeGreen;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@function weight($weight-name) {
+    @return map-get($font-weights , $weight-name );
+}
+
+@mixin dflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin dcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

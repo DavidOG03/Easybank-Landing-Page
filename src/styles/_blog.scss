@@ -1,0 +1,148 @@
+@use './variables/fonts' as *;
+@use './variables/colors' as *;
+@import "./variables/functions";
+
+.blog{
+    background: $VeryLightGray;
+    padding-block: 5rem 4.5rem;
+    font-family: $Fontfamily;
+    height: auto;
+    h2{
+        font-size: 2rem;
+        font-weight: weight(regular);
+        text-align: center;
+        padding-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .articles{
+        padding-inline: 1.5rem;
+        @include dcenter;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    
+}
+
+.article-card{
+    max-width: 20rem;
+    border-radius: 0.4rem;
+    background: $White;
+    max-height: 22rem;
+
+    &_image{
+        width: 100%;
+        height: 100%;
+        border-radius:  0.4rem 0.4rem 0 0;
+        object-fit: cover;
+        max-height: 10.5rem;
+    }
+
+    &_info{
+        padding:1.25rem 1.75rem;
+        span{
+            color: $GrayishBlue;
+            font-size: 0.6rem;
+            display: block;
+            padding-bottom: 0.75rem;
+        }
+        a{
+            color: $DarkBlue;
+            font-size: 1rem;
+            text-align: left;
+            font-weight: weight(regular);
+            text-decoration: none;
+            &:hover{
+                color: $LimeGreen;
+            }
+
+        }
+        p{
+            color: $GrayishBlue;
+            font-size: 0.8rem;
+            text-align: left;
+            padding: unset;
+            padding-block: 0.75rem 1.5rem;
+            line-height: 1.3;
+        }
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1279px) {
+    .blog{
+        padding-inline: 6.5%;
+
+        h2{
+            text-align: left;
+        }
+
+        .articles{
+            padding-inline:unset;
+            display: flex;
+            flex-direction: unset;
+            justify-content: space-between;
+            align-items:stretch;
+            // flex-wrap: wrap;
+            // gap: 1rem;
+        }
+    }
+
+    .article-card{
+        // height: auto;
+        max-height: 22rem;
+        &_image{
+            height: 7rem;
+        }
+        &_info{
+            padding: 0.8rem;
+        }
+    }
+}
+
+@media screen and (min-width:1280px){
+    .blog{
+        padding-inline: 11.7%;
+        padding-block: 5rem 4.65rem;
+
+        h2{
+            text-align: left;
+            font-size: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .articles{
+            padding-inline:unset;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:stretch;
+            height: auto;
+            // flex-wrap: wrap;
+            // gap: 1.8rem;
+        }
+    }
+
+    .article-card{
+        // height: auto;
+        max-height: 24rem;
+        &_image{
+            height: 12.5rem;
+        }
+        &_info{
+            padding:1.5rem 1.25rem;
+            span{
+                font-size: 0.7rem;
+            }
+            a{
+                font-size: 1.05rem;
+            }
+            p{
+                font-size: 0.9rem;
+                line-height: 1.2;
+                letter-spacing: -0.02rem;
+                padding-block: 0.75rem ;
+            }
+        }
+    }
+}

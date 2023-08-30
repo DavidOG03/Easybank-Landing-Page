@@ -1,0 +1,234 @@
+@use './variables/fonts' as *;
+@use './variables/colors' as *;
+@import "./variables/functions";
+
+.about{
+    background: $LightGrayishBlue;
+    padding-block: 4rem 2rem ;
+
+    &-mockups{
+        display: none;
+    }
+    &-heading-box{
+        display:block;
+        text-align: center;
+        max-width: 15rem;
+        margin: auto;
+        padding-bottom: 1.2rem;
+        padding-left: unset;
+    }
+    &-heading{
+        font-size: 2rem;
+        font-weight: weight(regular);
+        margin-right: 0.35rem;
+        display: inline-block;
+    }
+
+    &-paragraph{
+        display: block;
+        margin: auto;
+        line-height: 1.6;
+        letter-spacing: -0.02rem;
+        padding-bottom: 3.5rem;
+        padding-inline: 0.5rem;
+        max-width: 24rem;
+        text-align: center;
+    }
+    &-text{
+        font-size: $Fontsize;
+        font-weight: weight(light);
+        color: $GrayishBlue;
+        
+
+    }
+
+    .services{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        
+        .about-card{
+            
+            max-height: 24rem;
+            &_image{
+                display: block;
+                margin: auto;
+            }
+            &_info{
+                max-width: 24rem;
+                .about-heading{
+                    font-weight: weight(regular);
+                    font-size: 1.25rem;
+                    text-align: center;
+                    padding-block:1.35rem 0;
+                    display: inline-block;
+                    color: $DarkBlue;
+                }
+            
+                span{
+                    font-weight: weight(light);
+                    font-size: $Fontsize;
+                    color: $GrayishBlue;
+                    line-height: 1.6;
+                    text-align: center;
+                    letter-spacing: -0.01rem;
+            }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1279px) {
+    .about{
+        background: $LightGrayishBlue;
+        padding-block: 4rem 2rem ;
+        padding-inline: 6.5%;
+        position: relative;
+
+        &-mockups{
+            display: block;
+            position: absolute;
+            top: -80%;
+            right: -5%;
+            width: 28rem;
+        }
+        &-heading-box{
+            display:block;
+            text-align: left;
+            max-width: unset;
+            display: inline-block;
+            padding-bottom: 1.2rem;
+            padding-left: unset;
+        }
+        &-heading{
+            font-size: 2rem;
+            font-weight: weight(regular);
+            margin-right: 0.35rem;
+        }
+    
+        &-paragraph{
+            display: block;
+            margin: unset;
+            margin-right: auto;
+            line-height: 1.6;
+            padding-bottom: 3.5rem;
+            padding-inline: unset;
+            max-width: 40rem;
+            text-align: left;
+        }
+        &-text{
+            font-size: $Fontsize;
+            font-weight: weight(light);
+            color: $GrayishBlue;
+        }
+    
+        .services{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+
+            .about-card{
+            
+                max-height: 24rem;
+                &_image{
+                    display: block;
+                    margin: unset;
+                    margin-right: auto;
+                }
+                &_info{
+                   
+                    .about-heading{
+                        display: inline-block;
+                        text-align: left;
+                    }
+                
+                    span{
+                        text-align: left;
+                        padding-inline: unset;
+                }
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .about{
+        background: $LightGrayishBlue;
+        padding-block: 6.75rem 4rem;
+        padding-inline: 11.7%;
+
+        &-mockups{
+            display: block;
+            position: absolute;
+            top: -15%;
+            right: -8%;
+            z-index: 10;
+            
+        }
+        &-heading-box{
+            display:block;
+            text-align: left;
+            max-width: unset;
+            display: inline-block;
+            padding-bottom: 1.2rem;
+            padding-left: unset;
+        }
+        &-heading{
+            font-size: 2rem;
+            font-weight: weight(regular);
+            margin-right: 0.35rem;
+        }
+    
+        &-paragraph{
+            display: block;
+            margin: unset;
+            margin-right: auto;
+            line-height: 1.6;
+            padding-bottom: 3.5rem;
+            padding-inline: unset;
+            max-width: 40rem;
+            text-align: left;
+        }
+        &-text{
+            font-size: $Fontsize;
+            font-weight: weight(light);
+            color: $GrayishBlue;
+        }
+    
+        .services{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 1.25rem;
+            padding-inline: unset;
+
+            .about-card{
+            
+                max-height: 24rem;
+                &_image{
+                    display: block;
+                    margin: unset;
+                    margin-right: auto;
+                }
+                &_info{
+                   
+                    .about-heading{
+                        display: inline-block;
+                        text-align: left;
+                    }
+                
+                    span{
+                        text-align: left;
+                        padding-inline: unset;
+                    }
+                }
+            }
+        }
+    }
+}

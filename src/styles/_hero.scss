@@ -1,0 +1,226 @@
+@use './variables/fonts' as *;
+@use './variables/colors' as *;
+@import "./variables/functions";
+
+.hero{
+    width: 100%;
+    background: $VeryLightGray;
+
+   
+    .desktop-intro-bg{
+        display: none;
+    }
+&-img{
+position: relative;
+width: 100%;
+// p{
+//     max-width: 25rem;
+   
+// }
+
+
+.mobile-intro-bg{
+    width: 100%;
+    margin-left: auto;
+}
+    .mockups{
+        position: absolute;
+        top: -14%;
+        left: 50%;
+        translate: -50%;
+        width: 93%;
+        max-width: 50rem;
+        z-index: 5;
+    }
+}
+
+.text{
+    padding-bottom: 5.5rem;
+
+    margin-top: -2.4rem;
+    h1{
+        font-family: $Fontfamily;
+        color: $DarkBlue;
+        font-weight: weight(regular);
+        font-size: 2.5rem;
+        text-align: center;
+        text-wrap: balance;
+        padding-bottom: 1rem;
+        max-width: 300px;
+        margin: auto;
+
+    }
+    p{
+        font-size: $Fontsize;
+        font-weight: weight(light);
+        color: $GrayishBlue;
+        text-align: center;
+        line-height: 1.5;
+        padding-bottom: 2rem;
+        padding-inline: 0.4rem;
+        max-width: 25rem;
+        margin: auto;
+    }
+    .CTA-btn{
+        margin: auto;
+        display: block;
+        padding: 0.9rem 2rem;
+        border: none;
+        border-radius: 1.8rem;
+        font-family: $Fontfamily;
+        font-size: 0.9rem;
+        color: $LightGrayishBlue;
+        background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+        font-weight: weight(bold);
+
+        &:hover{
+            cursor: pointer;
+            outline: none;
+            opacity: 0.7;
+        }
+    }
+}
+}
+
+@media screen and (min-width:800px) and (max-width:1279px) {
+    
+    .hero{
+    @include dflex;
+    flex-direction: row-reverse;
+    height: 28rem;
+    padding-left: 6.5%;
+    background:$VeryLightGray;
+    position: relative;
+
+   
+    .desktop-intro-bg{
+        display: block;
+        width: 80%;
+        // height: 100%;
+        position: absolute;
+        right: -28%;
+        top: -10%;
+    }
+    &-img{
+       width: 40rem;
+       height: 100%;
+        
+        .mobile-intro-bg{
+            display: none;
+        }
+        .mockups{
+            // width: 100%;
+            // top:0%;
+            // left: 115%;
+            // translate: -100%;
+            display: none;
+        }
+    }
+    .text{
+        flex-basis: 70%;
+        padding-bottom: unset;
+        padding-top: 3rem;
+        margin-right: auto;
+        h1{
+            text-align: left;
+            text-wrap: balance;
+            margin: unset;
+            max-width: 400px;
+        }
+        p{
+            font-size: $Fontsize;
+            font-weight: weight(light);
+            color: $GrayishBlue;
+            text-align: left;
+            line-height: 1.5;
+            padding-bottom: 2rem;
+            padding-inline: unset;
+            margin: unset;
+            min-width: 18rem;
+        }
+        .CTA-btn{
+            margin-right: auto;
+            display: unset;
+    
+            &:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+}
+
+@media screen and (min-width:1280px)  {
+    
+    .hero{
+    @include dflex;
+    flex-direction: row-reverse;
+    height: 46rem;
+    padding-left: 11.7%;
+    width: 100%;
+    background-color: $VeryLightGray;
+    position: relative;
+    overflow: hidden;
+
+    .desktop-intro-bg{
+        display: block;
+        width: 90%;
+        // height: 100%;
+        position: absolute;
+        right: -33%;
+        top: -25%;
+    }
+
+    &-img{
+        width: 100%;
+        height: 100%;
+
+        .mobile-intro-bg{
+            display: none;
+        }
+    
+        .mockups{
+            // width: 100%;
+            // top:-5%;
+            // left: 115%;
+            // translate: -100%;
+            display: none;
+        }
+    }
+    .text{
+        flex-basis: 70%;
+        padding-bottom: unset;
+        padding-top: 7rem;
+        margin-right: auto;
+        h1{
+            text-align: left;
+            // text-wrap: balance;
+            max-width: unset;
+            font-size: 3.5rem;
+            margin: unset;
+            letter-spacing: -0.1rem;
+        }
+        p{
+            font-size: 1.15rem;
+            font-weight: weight(light);
+            color: $GrayishBlue;
+            text-align: left;
+            line-height: 1.5;
+            padding-bottom: 2rem;
+            padding-inline: unset;
+            margin: unset;
+            max-width: 29rem;
+        }
+        .CTA-btn{
+            margin-right: auto;
+            display: unset;
+    
+            &:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+}
